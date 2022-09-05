@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!--하단 날짜 슬라이드(Slick Carousel Slider)-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<title>시작 페이지</title>
+<script src="/js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+
+
+<!-- main -->
+<!-- 상단 섹션 슬라이드 크기 조정을 위한 부분 (upper Middle slide resizing part)  -->
+            <div class="upper_slide">
+
+                <!-- 슬라이드 부분 (Slide image ) >> (Bootstrap) -->
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- 슬라이드 이미지 하단부분의 버튼 ( button under slide image )-->
+                    <div class="carousel-indicators" style="z-index:1;">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- 슬라이드 이미지(slide image)-->
+                    <div class="carousel-inner">
+                        <!-- 첫 슬라이드 요소 (first slide) -->
+                        <div class="carousel-item active">
+                            <img src="/pictures/pic2.jpg" 
+                            class="d-block" alt="..." height= 450px; width=100%; style="border-radius:10px; background:orange;">
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <!-- 두번째 슬라이드 요소 (second slide) -->
+                        <div class="carousel-item">
+                            <img src="/pictures/pic3.jpg" 
+                            class="d-block" alt="..." height=450px; width=100%; style="border-radius:10px; background:blue;">
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <!-- 세번째 슬라이드 요소 (third slide) -->
+                        <div class="carousel-item">
+                            <img src="/pictures/pic1.jpg" 
+                            class="d-block" alt="..." height=450px; width=100%; style="border-radius:10px; background:red;">
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <!-- 네번째 슬라이드 요소 (fourth slide) -->
+                        <div class="carousel-item">
+                            <img src="/pictures/pic4.jpg" class="d-block" alt="..." height=450px; width=100%; style="background:yellow;">
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                        <!-- 다섯번째 슬라이드 요소 (fifth slide) -->
+                        <div class="carousel-item">
+                            <img src="/pictures/pic5.jpg" 
+                            class="d-block" alt="..." height=450px; width=100%; style="background:black;">
+                            <div class="carousel-caption d-none d-md-block"></div>
+                        </div>
+                    </div> 
+                    <!-- 슬라이드 이미지 부분 종료 ( <carousel-inner> End) -->
+                    
+                    <!-- 슬라이드 양옆의 버튼( buttons on both sides of the slide ) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+    
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+    
+                </div>        <!-- 슬라이드 부분 종료 (Slide End)-->
+            </div> <!-- 슬라이드 크기조절 부분 종료 (slide resizing part End) -->
+			
+			<!-- 동원 필터 추가 -->
+				
+			<div class="filter_selectBox">
+	
+					<h3 style="">선택목록</h3>
+					<div id="select" class="info">
+					</div>
+					
+					<p>지역</p>
+					<hr style="width: 100%; border-bottom:5px solid pink;"/>					
+					<div id="areaItem" class="info" style="1px solid black">
+						<button class="area_filter" value="서울"  id="area1" onclick="area_filter_click(this)">서울</button>
+						<button class="area_filter" value="인천" id="area2" onclick="area_filter_click(this)">인천광역시</button>
+						<button class="area_filter" value="경기" id="area3" onclick="area_filter_click(this)">경기</button>
+						<button class="area_filter" value="강원" id="area4" onclick="area_filter_click(this)">강원</button>
+						<button class="area_filter" value="충북" id="area5" onclick="area_filter_click(this)">충북</button>
+						<button class="area_filter" value="충남" id="area6" onclick="area_filter_click(this)">충남</button>
+						<button class="area_filter" value="대전" id="area7" onclick="area_filter_click(this)">대전광역시</button>
+						<button class="area_filter" value="광주" id="area8" onclick="area_filter_click(this)">광주광역시</button>
+						<button class="area_filter" value="세종특별자치시" id="area9" onclick="area_filter_click(this)">세종특별자치시</button>
+						<button class="area_filter" value="전북" id="area10" onclick="area_filter_click(this)">전북</button>
+						<button class="area_filter" value="전남" id="area11" onclick="area_filter_click(this)">전남</button>
+						<button class="area_filter" value="경북" id="area12" onclick="area_filter_click(this)">경북</button>
+						<button class="area_filter" value="경남" id="area13" onclick="area_filter_click(this)">경남</button>
+						<button class="area_filter" value="울산" id="area14" onclick="area_filter_click(this)">울산광역시</button>
+						<button class="area_filter" value="부산" id="area15" onclick="area_filter_click(this)">부산광역시</button>
+						<button class="area_filter" value="제주특별자치도" id="area16" onclick="area_filter_click(this)">제주특별자치도</button>
+					</div>
+					
+					<p>대분류</p>
+					<hr style="width: 100%; border-bottom:5px solid pink;"/>
+					
+					<div id="item1" class="info" style="border: 1px solid black;">
+						<button class="lc_filter" th:each="lc_name, index : ${LC_list}" th:text="${lc_name}" th:id="lc+${index.index}"></button>
+					</div>
+					
+					<br />
+					<p>소분류</p>
+					
+					<hr style="width: 100%; border-bottom:5px solid pink;"/>
+					
+					<div id="sc" class="info2"></div>
+					
+					
+					<div id="selectItemsBox">
+						<input type="hidden" value="" id="moim_select" />
+						<input type="hidden" value="" id="area_select" />
+						<input type="hidden" value="" id="lc_select" />
+						<input type="hidden" value="" id="sc_select"/>					
+					</div>
+					
+					
+					
+						
+			
+			</div>
+			
+			
+			<!-- 동원 필터 추가 종료 -->
+			
+			<div class="under_slide" >
+			  	<div id="slider-div"  >
+			  		<th:block th:each="num : ${#numbers.sequence(1,14)}">
+					    <p class="slider-element date_sort_start" onclick="click_date(this);" th:if="${num==1}">
+					    	<span class="slider-element-date" th:if="${(today_date+numStat.index)>Month_date}" th:text="${#numbers.formatDecimal(today_date+numStat.index-Month_date,2,0)}"></span>
+					    	<span class="slider-element-date" th:unless="${(today_date+numStat.index)>Month_date}"th:text="${today_date+numStat.index}"></span>
+					    	<br>
+					    	<span class="slider-element-day" th:text="${today_dayList[(today_day+numStat.index)%7]}"></span>
+					    </p>
+					    
+					    <p class="slider-element" onclick="click_date(this);" th:unless="${num==1}">
+					    	<span class="slider-element-date" th:if="${(today_date+numStat.index)>Month_date}" th:text="${#numbers.formatDecimal(today_date+numStat.index-Month_date,2,0)}"></span>
+					    	<span class="slider-element-date" th:unless="${(today_date+numStat.index)>Month_date}"th:text="${today_date+numStat.index}"></span>
+					    	<br>
+					    	<span class="slider-element-day" th:text="${today_dayList[(today_day+numStat.index)%7]}"></span>
+					    </p>
+			  		</th:block>
+			  	</div>
+			</div>
+			
+
+	<div class="moimContentWrap">
+            <ul class="moimContentList">
+               <!-- <li class="moimContent" id="moimContent" th:if="${todayMoimList == null}">
+                  <p class="moimSubject" th:if="${todayMoimList == null}" th:text="오늘 모임이 없습니다."></p>
+               </li>
+
+               <li class="moimContent" id="moimContent" th:if="${todayMoimList != null}" th:each="tml, moimIndex : ${todayMoimList}">
+                  <p class="moimSubject" th:text="${tml.moim_name}"></p>
+                  <p class="moimInform moimCreator" >개설자
+                     <span class="moimInformInput moimCreatorInput">입력</span>
+                  </p>
+                  <p class="moimInform moimPersonCount" >모임인원
+                     <span class="moimInformInput moimPersonCountInput" th:text="${tml.moim_personnel}"></span>
+                  </p>
+                  <p class="moimInform moimLocation">모임장소
+                     <span class="moimInformInput moimLocationInput" th:text="${tml.moim_postCode}+${tml.moim_addr1}"></span>
+                  </p>
+                  <p class="moimInform moimTime">모임시간
+                     <span class="moimInformInput moimTimeInput" th:text="${tml.moim_time}"></span>
+                  </p>
+                  <button id="moimBtn_moimIndex" onclick="sendMoim(this.value)" th:value="${tml.moim_idx}">모임보기</button>
+               </li> -->
+               
+            </ul>
+    </div>
+			
+
+ <!-- 부트스트랩 자바스크립트 (Bootstrap Javascript) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+ </body>
+ 
+</html>
